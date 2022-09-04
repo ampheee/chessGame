@@ -11,18 +11,18 @@ import (
 var assets embed.FS
 
 func main() {
-	// Create an instance of the app structure
-	app := NewApp()
-	// Create application with options
+	appStartPage := NewApp()
 	err := wails.Run(&options.App{
 		Title:            "chessGame",
 		Width:            1024,
+		MinHeight:        512,
+		MinWidth:         334,
 		Height:           768,
 		Assets:           assets,
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup:        app.startup,
+		OnStartup:        appStartPage.startup,
 		Bind: []interface{}{
-			app,
+			appStartPage,
 		},
 	})
 

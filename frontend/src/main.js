@@ -1,16 +1,24 @@
 import './style.css';
-import './app.css';
+import './appStartMenu.css';
 
 import logo from './assets/images/logo-universal.png';
 import {Greet} from '../wailsjs/go/main/App';
 
 document.querySelector('#app').innerHTML = `
     <img id="logo" class="logo">
-      <div class="result" id="result">ITS A CHESS GAME!!</div>
-      <div class="input-box" id="input">
-        <input class="input" id="name" type="text" autocomplete="off" />
-        <button class="btn" onclick="greet()">Greet</button>
-      </div>
+    <div class="chess" id="chess">!IT IS A CHESS GAME!</div>
+    <div class="input-box" id="input">
+      <button class="btn" onclick="greet()">Easy AI</button>
+    </div>
+      
+    <div class="input-box" id="input">
+      <button class="btn" onclick="greet()">Medium AI</button>
+    </div>
+      
+    <div class="input-box" id="input">
+      <button class="btn" onclick="greet()">Hard AI</button>
+    </div>
+    <div class="developer" id="developer">developed by @ampheee</button>
     </div>
 `;
 document.getElementById('logo').src = logo;
@@ -19,15 +27,9 @@ let nameElement = document.getElementById("name");
 nameElement.focus();
 let resultElement = document.getElementById("result");
 
-// Setup the greet function
-window.greet = function () {
-    // Get name
-    let name = nameElement.value;
-
-    // Check if the input is empty
+window.gameEasy = function () {
+    document.querySelector()
     if (name === "") return;
-
-    // Call App.Greet(name)
     try {
         Greet(name)
             .then((result) => {
@@ -41,3 +43,10 @@ window.greet = function () {
         console.error(err);
     }
 };
+
+window.gameMedium = function (){
+}
+
+window.gameHard = function (){
+
+}
