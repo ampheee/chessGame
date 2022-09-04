@@ -1,4 +1,4 @@
-module changeme
+module chessGame
 
 go 1.17
 
