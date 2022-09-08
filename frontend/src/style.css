@@ -1,0 +1,43 @@
+html {
+    background-color: rgba(245, 245, 245, 0.9);
+    text-align: center;
+    color: white;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@font-face {
+    font-family: "Cursive";
+    font-style: normal;
+    font-weight: normal;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "uindBaseFont";
+    font-style: normal;
+    font-weight: normal;
+    src: local(""),
+    url("assets/fonts/UF1.ttf") format("truetype");
+}
+
+#app {
+    height: 100vh;
+    min-height: 50%;
+    min-width: 50%;
+    text-align: center;
+}
+
+#board {
+    height: 100vh;
+    min-height: 50%;
+    min-width: 50%;
+    text-align: center;
+}
