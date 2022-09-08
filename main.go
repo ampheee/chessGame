@@ -10,7 +10,7 @@ import (
 var assets embed.FS
 
 func main() {
-	appStartPage := NewApp()
+	app := NewApp()
 	err := wails.Run(&options.App{
 		Title:            "chessGame",
 		Width:            1024,
@@ -19,12 +19,11 @@ func main() {
 		Height:           768,
 		Assets:           assets,
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup:        appStartPage.startup,
+		OnStartup:        app.startup,
 		Bind: []interface{}{
-			appStartPage,
+			app,
 		},
 	})
-
 	if err != nil {
 		println("Error:", err.Error())
 	}

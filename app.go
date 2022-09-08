@@ -1,6 +1,7 @@
 package main
 
 import (
+	"chessGame/backend/typesAndFuncs"
 	"context"
 )
 
@@ -20,5 +21,15 @@ func (a *App) startup(ctx context.Context) {
 }
 
 func (a *App) game() (err error) {
+	field := typesAndFuncs.InitField()
+	for i := 0; i < 8; i++ {
+		for j := 0; j < 8; j++ {
+			if i%2 == 0 {
+				field.GameField[i][j] = j % 2
+			} else {
+				field.GameField[i][j] = (j + 1) % 2
+			}
+		}
+	}
 	return nil
 }

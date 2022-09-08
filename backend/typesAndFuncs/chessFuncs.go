@@ -1,7 +1,7 @@
 package typesAndFuncs
 
-func (field *Field) Init() *Field {
-	return &Field{}
+func InitField() Field {
+	return Field{GameField: [][]int{}}
 }
 
 func (figure *Figure) Move(currentPosition, priority int) (newPosition int, err error) {

@@ -1,11 +1,11 @@
-package types
+package typesAndFuncs
 
 type Figure struct {
 	Priority int
 }
 
 type Field struct {
-	Field [][]int
+	GameField [][]int
 }
 
 type FigureActions interface {
